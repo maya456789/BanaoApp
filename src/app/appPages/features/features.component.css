@@ -1,0 +1,13 @@
+
+
+@media only screen and (max-width: 991px) {
+  .feature{
+    display: none;
+   }
+}
+
+@media only screen and (min-width: 992px) {
+  .feature1{
+    display: none;
+   }
+}

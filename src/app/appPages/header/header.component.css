@@ -1,0 +1,47 @@
+
+.navbar-nav {
+  margin-left: auto;
+
+}
+li,a{
+  padding-left: 15px;
+
+}
+
+.dropdown-toggle:after { display: none; }
+
+@media only screen and (min-width: 992px) {
+   .searchImg{
+    display:none;
+   }
+
+
+}
+
+@media only screen and (min-width: 767px) {
+  .mobImg{
+    display:none;
+   }
+
+}
+
+@media only screen and (max-width: 767px) {
+  .deskImg{
+    display: none;
+   }
+
+   .signIn{
+    display: none;
+   }
+}
+@media only screen and (min-width: 1200px) {
+  .mLeft{
+    margin-left: 100px;
+  }
+}
+
+@media (min-width:768px) and (max-width:992px){
+  .signIn{
+    display: none;
+   }
+}
