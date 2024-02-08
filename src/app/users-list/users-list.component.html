@@ -1,0 +1,61 @@
+
+
+
+
+
+
+<div class="container-fluid">
+
+<div class="row mt-4">
+   <div class="col-md-6 col-sm-12 d-flex justify-content-center align-item-center" >
+    <table border="1" class="table table-hover w-100"  >
+  <thead>
+  <tr>
+    <th scope="col" style="width: 15%">Users</th>
+    <th scope="col" style="width: 40%"></th>
+    <th  style="width: 50%" ></th>
+
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngIf="showSpinner"><div class="text-center">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div></tr>
+  <tr *ngFor="let ob of userList" (click)="getUserDetails(ob)">
+   <td>{{ob.id}}</td>
+   <td ><img src={{ob.avatar}}  class="rounded-circle w3-hover-grayscale"  alt="Profile Image" width="200" height="180"></td>
+   <td  style="width: 25%"><b>{{ob.profile.firstName}}</b><br>{{ob.jobTitle}}</td>
+
+  </tr>
+</tbody>
+</table>
+   </div>
+   <div class="col-md-6 ">
+
+    <h2>Details</h2>
+
+<div *ngIf="showDetails" class="card" style="width: 18rem;">
+  <img src={{selectedUser.avatar}} class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{selectedUser.profile.firstName}}&nbsp;{{selectedUser.profile.lastName}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{selectedUser.jobTitle}}</h6>
+
+    <p class="card-text">{{selectedUser.Bio}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{selectedUser.profile.email}}</li>
+    <li class="list-group-item">{{selectedUser.createdAt}}</li>
+    <li class="list-group-item">User Name : {{selectedUser.profile.username}}</li>
+  </ul>
+
+</div>
+   </div>
+</div>
+
+</div>
+
+
+
+
